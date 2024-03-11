@@ -1,0 +1,82 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dc="clr-namespace:Домашнее_задание_3"
+        xmlns:local="clr-namespace:Домашнее_задание_3"
+        x:DataType="dc:DataContextMainWindow"
+        Width="320" Height="400" MinWidth="320" MinHeight="400"
+        x:Class="Домашнее_задание_3.MainWindow"
+        Title="Calculator"
+        Background="#ffff">
+
+    <Design.DataContext>
+        <dc:DataContextMainWindow/>
+    </Design.DataContext>
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="{Binding Text}" HorizontalAlignment="Center" FontSize="36"/>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="floor" Command="{Binding ButtonClick}" CommandParameter="floor" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#4a8282"/>
+            <Button Content="ceil" Command="{Binding ButtonClick}" CommandParameter="ceil" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#4a8282"/>
+            <Button Content="n!" Command="{Binding ButtonClick}" CommandParameter="!" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#4a8282"/>
+            <Button Content="x^y" Command="{Binding ButtonClick}" CommandParameter="^" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#4a8282"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="ln" Command="{Binding ButtonClick}" CommandParameter="ln" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#5d9b9b"/>
+            <Button Content="sin" Command="{Binding ButtonClick}" CommandParameter="sin" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#5d9b9b"/>
+            <Button Content="cos" Command="{Binding ButtonClick}" CommandParameter="cos" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#5d9b9b"/>
+            <Button Content="tan" Command="{Binding ButtonClick}" CommandParameter="tg" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#5d9b9b"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="log" Command="{Binding ButtonClick}" CommandParameter="lg" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#5f9ea0"/>
+            <Button Content="mod" Command="{Binding ButtonClick}" CommandParameter="mod" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#5f9ea0"/>
+            <Button Content="/" Command="{Binding ButtonClick}" CommandParameter="/" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#5f9ea0"/>
+            <Button Content="⌫" Command="{Binding ButtonClick}" CommandParameter="⌫" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#5f9ea0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="7" Command="{Binding ButtonClick}" CommandParameter="7" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#8AD2D0"/>
+            <Button Content="8" Command="{Binding ButtonClick}" CommandParameter="8" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#8AD2D0"/>
+            <Button Content="9" Command="{Binding ButtonClick}" CommandParameter="9" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#8AD2D0"/>
+            <Button Content="*" Command="{Binding ButtonClick}" CommandParameter="*" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#5f9ea0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="4" Command="{Binding ButtonClick}" CommandParameter="4" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#8AD2D0"/>
+            <Button Content="5" Command="{Binding ButtonClick}" CommandParameter="5" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#8AD2D0"/>
+            <Button Content="6" Command="{Binding ButtonClick}" CommandParameter="6" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#8AD2D0"/>
+            <Button Content="-" Command="{Binding ButtonClick}" CommandParameter="-" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#5f9ea0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="1" Command="{Binding ButtonClick}" CommandParameter="1" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#8AD2D0"/>
+            <Button Content="2" Command="{Binding ButtonClick}" CommandParameter="2" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#8AD2D0"/>
+            <Button Content="3" Command="{Binding ButtonClick}" CommandParameter="3" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#8AD2D0"/>
+            <Button Content="+" Command="{Binding ButtonClick}" CommandParameter="+" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#5f9ea0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="," Command="{Binding ButtonClick}" CommandParameter="," Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#5f9ea0"/>
+            <Button Content="0" Command="{Binding ButtonClick}" CommandParameter="0" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#8AD2D0"/> 
+            <Button Content="=" Command="{Binding ButtonClick}" CommandParameter="=" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#CFE899"/>
+            <Button Content="C" Command="{Binding ButtonClick}" CommandParameter="C" Width="80" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#EC9B9E"/>           
+        </StackPanel>
+
+    </Grid>
+
+</Window>
